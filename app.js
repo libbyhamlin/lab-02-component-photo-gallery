@@ -1,6 +1,6 @@
 import images from './data/images.js';
 import htmlToDom from './util/html-to-DOM.js';
-import generateCreatureItemHtmlString from './home/render-creature-items.js';
+import generateCreatureItemHtmlString from './home/renderPageImageItems.js/index.js.js';
 
 // reference the list
 const creatureList = document.querySelector('.images');
