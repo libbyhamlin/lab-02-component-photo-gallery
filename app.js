@@ -1,6 +1,6 @@
 import images from './data/images.js';
 import htmlToDom from './util/html-to-DOM.js';
-import generateCreatureItemHtmlString from './home/renderPageImageItems.js/index.js.js';
+import generateCreatureItemHtmlString from './home/renderPageItems.js';
 
 // reference the list
 const creatureList = document.querySelector('.images');
@@ -14,7 +14,7 @@ images.forEach(images => {
     const dom = htmlToDom(htmlString);
 
   // append to the list
-    creaturelist.appendChild(dom);
+    creatureList.appendChild(dom);
 });
 
 //This file has the top level component

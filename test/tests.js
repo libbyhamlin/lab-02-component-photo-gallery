@@ -1,1 +1,1 @@
-import './example.test.js';
+import '../test/renderPageItems.test.js';
