@@ -1,4 +1,6 @@
 import Component from '../Component.js';
+import 
+
 class RenderPageItems extends Component {
     renderHTML() {
         const image = this.props.image;
