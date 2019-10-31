@@ -18,3 +18,7 @@ images.forEach(images => {
 });
 
 //This file has the top level component
+
+
+//Classe notes
+// Header doesn't require props bc its hard coded in

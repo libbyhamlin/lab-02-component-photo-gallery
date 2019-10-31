@@ -1,4 +1,4 @@
-import renderPageItems from '../home/renderPageItems.js';
+import RenderPageItems from '../home/renderPageItems.js';
 const test = QUnit.test;
 
 test('render image to display', assert => {
@@ -15,7 +15,7 @@ test('render image to display', assert => {
       <li class="creature-item">
           <div class="info-container">
                   <h2>Smaug</h2>
-                  <p class="images-type">dragon</p>
+                  <p class="image-type">dragon</p>
           </div>
           <div class="image-container">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Smaug_par_David_Demaret.jpg/290px-Smaug_par_David_Demaret.jpg" alt="Smaug image">
@@ -27,10 +27,8 @@ test('render image to display', assert => {
 
   // act
     const props = { image: image };
-    const newRenderPageItems = new renderPageItems(props);
+    const newRenderPageItems = new RenderPageItems(props);
     const image2 = newRenderPageItems.renderHTML();
-
-  // const html = renderPageItems(image);
-
+    console.log(assert);
     assert.htmlEqual(image2, expected);
 });

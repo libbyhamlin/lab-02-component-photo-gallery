@@ -1,9 +1,9 @@
-export default function generateCreatureItemHtmlString(image) {
-    if (!image) {
-        throw new Error('you need to supply a image');
-    }
+import Component from '../Component.js';
+class RenderPageItems extends Component {
+    renderHTML() {
+        const image = this.props.image;
 
-    const html = /*html*/ `
+        return /*html*/ `
     <li class="creature-item">
         <div class="info-container">
                 <h2>${image.title}</h2>
@@ -16,6 +16,7 @@ export default function generateCreatureItemHtmlString(image) {
         <p class="description">${image.description}</p>
     </li>
     `;
-
-    return html;
+    }
 }
+
+export default RenderPageItems;
