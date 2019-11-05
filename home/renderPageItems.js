@@ -5,18 +5,16 @@ class RenderPageItems extends Component {
         const image = this.props.image;
 
         return /*html*/ `
-    <li class="creature-item">
-        <div class="info-container">
+        <li>
+         <div class="image-container">
                 <h2>${image.title}</h2>
-                <p class="image-type">${image.keyword}</p>
-        </div>
-        <div class="image-container">
-                <img src="${image.url}" alt="${image.title} image">
-        </div>
-        <p class="num-horns">${image.horns}</p>
-        <p class="description">${image.description}</p>
-    </li>
-    `;
+                    <img src="${image.url}" title="${image.description}">
+             </div>
+            <div class="info-container">
+                <p class= "number-of-horns">Num of Horns: ${image.horns}</p>
+            </div>
+        </li>
+      `;
     }
 }
 

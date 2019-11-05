@@ -12,23 +12,21 @@ test('render image to display', assert => {
     };
 
     const expected = /*html*/ `
-      <li class="creature-item">
-          <div class="info-container">
-                  <h2>Smaug</h2>
-                  <p class="image-type">dragon</p>
-          </div>
-          <div class="image-container">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Smaug_par_David_Demaret.jpg/290px-Smaug_par_David_Demaret.jpg" alt="Smaug image">
-          </div>
-          <p class="num-horns">100</p>
-          <p class="description">Fan illustration of Smaug from 'The Hobbit'</p>
-      </li>
-      `;
+    <li>
+        <div class="image-container">
+        <h2>Smaug</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Smaug_par_David_Demaret.jpg/290px-Smaug_par_David_Demaret.jpg" title="Fan illustration of Smaug from 'The Hobbit'"> 
+        </div>
+        <div class="info-container">
+            <p class= "number-of-horns">Num of Horns: 100</p>
+        </div> 
+    </li>
+`;
 
   // act
     const props = { image: image };
     const newRenderPageItems = new RenderPageItems(props);
     const image2 = newRenderPageItems.renderHTML();
-  
+
     assert.htmlEqual(image2, expected);
 });
