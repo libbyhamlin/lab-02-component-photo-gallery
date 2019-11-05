@@ -29,6 +29,6 @@ test('render image to display', assert => {
     const props = { image: image };
     const newRenderPageItems = new RenderPageItems(props);
     const image2 = newRenderPageItems.renderHTML();
-    console.log(assert);
+  
     assert.htmlEqual(image2, expected);
 });
